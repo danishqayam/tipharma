@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +44,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -76,6 +86,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -117,17 +129,149 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Contents\contactform\contactform.js" />
+    <Content Include="Contents\contactform\Readme.txt" />
+    <Content Include="Contents\css\style.css" />
+    <Content Include="Contents\img\about-bg.jpg" />
+    <Content Include="Contents\img\about-mission.jpg" />
+    <Content Include="Contents\img\about-plan.jpg" />
+    <Content Include="Contents\img\about-vision.jpg" />
+    <Content Include="Contents\img\apple-touch-icon.png" />
+    <Content Include="Contents\img\call-to-action-bg.jpg" />
+    <Content Include="Contents\img\clients\client-1.png" />
+    <Content Include="Contents\img\clients\client-2.png" />
+    <Content Include="Contents\img\clients\client-3.png" />
+    <Content Include="Contents\img\clients\client-4.png" />
+    <Content Include="Contents\img\clients\client-5.png" />
+    <Content Include="Contents\img\clients\client-6.png" />
+    <Content Include="Contents\img\clients\client-7.png" />
+    <Content Include="Contents\img\clients\client-8.png" />
+    <Content Include="Contents\img\facts-bg.jpg" />
+    <Content Include="Contents\img\facts-img.png" />
+    <Content Include="Contents\img\favicon.png" />
+    <Content Include="Contents\img\intro-carousel\1.jpg" />
+    <Content Include="Contents\img\intro-carousel\2.jpg" />
+    <Content Include="Contents\img\intro-carousel\3.jpg" />
+    <Content Include="Contents\img\intro-carousel\4.jpg" />
+    <Content Include="Contents\img\intro-carousel\5.jpg" />
+    <Content Include="Contents\img\portfolio\app1.jpg" />
+    <Content Include="Contents\img\portfolio\app2.jpg" />
+    <Content Include="Contents\img\portfolio\app3.jpg" />
+    <Content Include="Contents\img\portfolio\card1.jpg" />
+    <Content Include="Contents\img\portfolio\card2.jpg" />
+    <Content Include="Contents\img\portfolio\card3.jpg" />
+    <Content Include="Contents\img\portfolio\web1.jpg" />
+    <Content Include="Contents\img\portfolio\web2.jpg" />
+    <Content Include="Contents\img\portfolio\web3.jpg" />
+    <Content Include="Contents\img\preloader.gif" />
+    <Content Include="Contents\img\quote-sign-left.png" />
+    <Content Include="Contents\img\quote-sign-right.png" />
+    <Content Include="Contents\img\team-1.jpg" />
+    <Content Include="Contents\img\team-2.jpg" />
+    <Content Include="Contents\img\team-3.jpg" />
+    <Content Include="Contents\img\team-4.jpg" />
+    <Content Include="Contents\img\testimonial-1.jpg" />
+    <Content Include="Contents\img\testimonial-2.jpg" />
+    <Content Include="Contents\img\testimonial-3.jpg" />
+    <Content Include="Contents\img\testimonial-4.jpg" />
+    <Content Include="Contents\img\testimonial-5.jpg" />
+    <Content Include="Contents\js\main.js" />
+    <Content Include="Contents\lib\animate\animate.css" />
+    <Content Include="Contents\lib\animate\animate.min.css" />
+    <Content Include="Contents\lib\bootstrap\css\bootstrap.css" />
+    <Content Include="Contents\lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Contents\lib\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Contents\lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Contents\lib\counterup\counterup.min.js" />
+    <Content Include="Contents\lib\easing\easing.js" />
+    <Content Include="Contents\lib\easing\easing.min.js" />
+    <Content Include="Contents\lib\font-awesome\css\font-awesome.css" />
+    <Content Include="Contents\lib\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Contents\lib\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Contents\lib\ionicons\css\ionicons.css" />
+    <Content Include="Contents\lib\ionicons\css\ionicons.min.css" />
+    <Content Include="Contents\lib\ionicons\fonts\ionicons.svg" />
+    <Content Include="Contents\lib\isotope\isotope.pkgd.js" />
+    <Content Include="Contents\lib\isotope\isotope.pkgd.min.js" />
+    <Content Include="Contents\lib\jquery\jquery-migrate.min.js" />
+    <Content Include="Contents\lib\jquery\jquery.min.js" />
+    <Content Include="Contents\lib\lightbox\css\lightbox.css" />
+    <Content Include="Contents\lib\lightbox\css\lightbox.min.css" />
+    <Content Include="Contents\lib\lightbox\images\close.png" />
+    <Content Include="Contents\lib\lightbox\images\loading.gif" />
+    <Content Include="Contents\lib\lightbox\images\next.png" />
+    <Content Include="Contents\lib\lightbox\images\prev.png" />
+    <Content Include="Contents\lib\lightbox\js\lightbox.js" />
+    <Content Include="Contents\lib\lightbox\js\lightbox.min.js" />
+    <Content Include="Contents\lib\lightbox\links.php" />
+    <Content Include="Contents\lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="Contents\lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="Contents\lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="Contents\lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="Contents\lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="Contents\lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="Contents\lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="Contents\lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="Contents\lib\owlcarousel\owl.carousel.js" />
+    <Content Include="Contents\lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="Contents\lib\superfish\hoverIntent.js" />
+    <Content Include="Contents\lib\superfish\superfish.js" />
+    <Content Include="Contents\lib\superfish\superfish.min.js" />
+    <Content Include="Contents\lib\touchSwipe\jquery.touchSwipe.js" />
+    <Content Include="Contents\lib\touchSwipe\jquery.touchSwipe.min.js" />
+    <Content Include="Contents\lib\waypoints\links.php" />
+    <Content Include="Contents\lib\waypoints\waypoints.min.js" />
+    <Content Include="Contents\lib\wow\wow.js" />
+    <Content Include="Contents\lib\wow\wow.min.js" />
+    <Content Include="EntityModel\DbModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DbModel.Context.cs</LastGenOutput>
+      <DependentUpon>DbModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="EntityModel\DbModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DbModel.edmx</DependentUpon>
+      <LastGenOutput>DbModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Global.asax" />
-    <Content Include="scripts\ai.0.15.0-build58334.js" />
-    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Contents\lib\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Contents\lib\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Contents\lib\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Contents\lib\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Contents\lib\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Contents\lib\ionicons\fonts\ionicons.eot" />
+    <Content Include="Contents\lib\ionicons\fonts\ionicons.ttf" />
+    <Content Include="Contents\lib\ionicons\fonts\ionicons.woff" />
+    <Content Include="Contents\lib\owlcarousel\LICENSE" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="CoreHelper\AutoMapperProfile.cs" />
+    <Compile Include="CoreHelper\DataProtection.cs" />
+    <Compile Include="EntityModel\DbModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\DbModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\DbModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\UserMaster.cs">
+      <DependentUpon>DbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserMasterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +279,17 @@
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <EntityDeploy Include="EntityModel\DbModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DbModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="EntityModel\DbModel.edmx.diagram">
+      <DependentUpon>DbModel.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -145,8 +300,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="Views\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

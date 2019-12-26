@@ -1,89 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using AutoMapper;
 using System.Web.Mvc;
+using TiPharma.CoreHelper;
+using TiPharma.Models;
+using TiPharma.EntityModel;
 
 namespace TiPharma.Controllers
 {
     public class HomeController : Controller
     {
+        private TiPharmaEntities dbContext = new TiPharmaEntities();
+
         // GET: Home
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Home/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Login()
         {
             return View();
         }
 
-        // GET: Home/Create
-        public ActionResult Create()
+        [HttpGet]
+        public ActionResult Register()
         {
-            return View();
+            UserMasterViewModel userMaster = new UserMasterViewModel();
+            return View(userMaster);
         }
 
-        // POST: Home/Create
+        [ValidateAntiForgeryToken]
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Register(UserMasterViewModel userMasterViewModel)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                userMasterViewModel.UserType = "Client";
+                var userMaster = Mapper.Map<UserMasterViewModel, UserMaster>(userMasterViewModel);
+                userMaster.Password = DataProtection.Encrypt(userMasterViewModel.Password);
+                dbContext.UserMasters.Add(userMaster);
+                dbContext.SaveChanges();
             }
-            catch
-            {
-                return View();
-            }
-        }
 
-        // GET: Home/Edit/5
-        public ActionResult Edit(int id)
-        {
             return View();
-        }
-
-        // POST: Home/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Home/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Home/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
         }
     }
 }
