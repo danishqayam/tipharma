@@ -150,10 +150,12 @@
     <Content Include="Contents\img\facts-img.png" />
     <Content Include="Contents\img\favicon.png" />
     <Content Include="Contents\img\intro-carousel\1.jpg" />
+    <Content Include="Contents\img\intro-carousel\1h.jpg" />
     <Content Include="Contents\img\intro-carousel\2.jpg" />
     <Content Include="Contents\img\intro-carousel\3.jpg" />
     <Content Include="Contents\img\intro-carousel\4.jpg" />
     <Content Include="Contents\img\intro-carousel\5.jpg" />
+    <Content Include="Contents\img\logo.png" />
     <Content Include="Contents\img\portfolio\app1.jpg" />
     <Content Include="Contents\img\portfolio\app2.jpg" />
     <Content Include="Contents\img\portfolio\app3.jpg" />
