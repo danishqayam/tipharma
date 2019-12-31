@@ -7,22 +7,30 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
+    <!-- Core JS & CSS-->
+    <script defer src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <!-- Favicons -->
-    <link href="~/Contents/img/favicon.png" rel="icon">
+    <link href="~/Contents/img/favti.png" rel="icon">
     <link href="~/Contents/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sarabun&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS File -->
-    <link href="~/Contents/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
     <!-- Libraries CSS Files -->
-    <link href="~/Contents/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    @*<link href="~/Contents/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">*@
     <link href="~/Contents/lib/animate/animate.min.css" rel="stylesheet">
     <link href="~/Contents/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="~/Contents/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="~/Contents/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <!-- Main Stylesheet File -->
     <link href="~/Contents/css/style.css" rel="stylesheet">
@@ -36,7 +44,7 @@
         <div class="container-fluid">
 
             <div id="logo" class="pull-left">
-                <h1><a href="#intro" class="scrollto">TiPharma</a></h1>
+                <h1><a href="#intro" class="scrollto">@*<img src="~/Contents/img/logo2.png" alt="" title="" />*@</a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
             </div>
@@ -48,7 +56,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#team">Team</a></li>
-                    <li class="menu-has-children">
+                    @*<li class="menu-has-children">
                         <a href="">Drop Down</a>
                         <ul>
                             <li><a href="#">Drop Down 1</a></li>
@@ -56,7 +64,7 @@
                             <li><a href="#">Drop Down 4</a></li>
                             <li><a href="#">Drop Down 5</a></li>
                         </ul>
-                    </li>
+                    </li>*@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav><!-- #nav-menu-container -->
@@ -70,7 +78,7 @@
     <section id="intro">
         <div class="intro-container">
             <div class="">
-                <div class=""><img src="~/Contents/img/intro-carousel/1h.jpg" alt=""></div>
+                <div class=""><img src="~/Contents/img/finalhp4.jpg" class="img-responsive" width="100%" alt=""></div>
             </div>
         </div>
     </section><!-- #intro -->
@@ -87,12 +95,12 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-lg-3 col-md-6 footer-info">
-                        <h3>BizPage</h3>
-                        <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+                    <div class="col-lg-4 col-md-6 footer-info">
+                        <h3>TiPharma</h3>
+                        @*<p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>*@
                     </div>
 
-                    <div class="col-lg-3 col-md-6 footer-links">
+                    <div class="col-lg-4 col-md-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
                             <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
@@ -103,33 +111,32 @@
                         </ul>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 footer-contact">
+                    <div class="col-lg-4 col-md-6 footer-contact">
                         <h4>Contact Us</h4>
                         <p>
-                            A108 Adam Street <br>
-                            New York, NY 535022<br>
-                            United States <br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> info@example.com<br>
+                            P&amp;O Plaza, Volkart Building, I. I. Chundrigar Road, Karachi, Pakistan <br>
+                            <strong>Phone:</strong> +92 300 2394865<br>
+                            <strong>Phone:</strong> +92 335 9977885<br>
+                            <strong>Email:</strong> atrpackages88@gmail.com<br>
                         </p>
 
                         <div class="social-links">
-                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-                            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="fab fa-google-plus"></i></a>
+                            <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
                         </div>
 
                     </div>
 
-                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                    @*<div class="col-lg-3 col-md-6 footer-newsletter">
                         <h4>Our Newsletter</h4>
                         <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
                         <form action="" method="post">
                             <input type="email" name="email"><input type="submit" value="Subscribe">
                         </form>
-                    </div>
+                    </div>*@
 
                 </div>
             </div>
@@ -137,16 +144,10 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong>BizPage</strong>. All Rights Reserved
+                &copy; Copyright <strong>TiPharma</strong>. All Rights Reserved
             </div>
             <div class="credits">
-                <!--
-                  All the links in the footer should remain intact.
-                  You can delete the links only if you purchased the pro version.
-                  Licensing information: https://bootstrapmade.com/license/
-                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
-                -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                Designed by <a href="#">IDEA X Team.</a>
             </div>
         </div>
     </footer><!-- #footer -->

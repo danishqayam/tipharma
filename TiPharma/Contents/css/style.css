@@ -133,7 +133,7 @@ h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
-  background-color: #000;
+  /*background-color: #000;*/
 }
 
 #header.header-scrolled {
@@ -176,9 +176,9 @@ h6 {
 #intro {
   display: table;
   width: 100%;
-  height: 100vh;
+  height: 95vh;
   background: #000;
-  margin-top: 92px;
+  /*margin-top: 92px;*/
 }
 
 #intro .carousel-item {
@@ -380,20 +380,22 @@ h6 {
 /* Nav Meu Styling */
 
 .nav-menu a {
-  padding: 0 8px 10px 8px;
-  text-decoration: none;
-  display: inline-block;
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  text-transform: uppercase;
-  outline: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-family: "Sarabun", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    outline: none;
 }
 
 .nav-menu li:hover > a,
 .nav-menu > .menu-active > a {
-  color: #18d26e;
+    color: #D0AD55;
+    background-color:#000;
+    border-radius:10px;
 }
 
 .nav-menu > li {
@@ -591,6 +593,91 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding-bottom: 30px;
   color: #333;
 }
+
+/* Main section
+--------------------------------*/
+
+#main {
+    background-color: #000;
+}
+
+/* Ordering System
+--------------------------------*/
+
+
+.ordersystemlogin {
+    margin-top: 80px;
+}
+
+.card {
+    height: 380px;
+    margin: 0 auto;
+    width: 400px;
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+.social_icon span {
+    font-size: 60px;
+    margin-left: 10px;
+    color: #FFC312;
+}
+
+    .social_icon span:hover {
+        color: white;
+        cursor: pointer;
+    }
+
+.card-header h3 {
+    color: white;
+}
+
+.social_icon {
+    position: absolute;
+    right: 20px;
+    top: -45px;
+}
+
+.input-group-prepend span {
+    width: 50px;
+    background-color: #FFC312;
+    color: black;
+    border: 0 !important;
+}
+
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+.remember {
+    color: white;
+}
+
+    .remember input {
+        width: 20px;
+        height: 20px;
+        margin-left: 15px;
+        margin-right: 5px;
+    }
+
+.login_btn {
+    color: black;
+    background-color: #FFC312;
+    width: 100px;
+}
+
+    .login_btn:hover {
+        color: black;
+        background-color: white;
+    }
+
+.links {
+    color: white;
+}
+
+    .links a {
+        margin-left: 4px;
+    }
 
 /* Section with background
 --------------------------------*/
@@ -1513,6 +1600,28 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   font-size: 13px;
   color: #ddd;
+}
+
+.counter {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    border-radius: 50px;
+}
+
+.count-title {
+    font-size: 40px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.count-text {
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
 }
 
 /*--------------------------------------------------------------

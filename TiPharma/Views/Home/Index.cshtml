@@ -3,5 +3,98 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+    <div class="container">
 
+        <div class="row ordersystemlogin">
+            <div class="col-12 text-center">
+                <h1 style="color:#D0AD55">Client Login</h1>
+
+            </div>
+        </div>
+        <div class="row" style="margin-bottom:50px;">
+            <div class="card col-6">
+                <div class="card-header">
+                    @*<div class="d-flex justify-content-end social_icon">
+                        <span><i class="fab fa-facebook-square"></i></span>
+                        <span><i class="fab fa-google-plus-square"></i></span>
+                        <span><i class="fab fa-twitter-square"></i></span>
+                    </div>*@
+                </div>
+                <div class="card-body">
+                    @*<div class="text-right">
+                        <span style="padding:0 5px;"><i class="fa fa-user-circle fa-2x"></i></span>
+                        <span style="padding:0 5px;"><i class="fa fa-heart fa-2x"></i></span>
+                        <span style="padding:0 5px;"><i class="fa fa-shopping-bag fa-2x"></i></span>
+                    </div>*@
+                    <p class="text-center">
+                        <span style="font-size:24px;color:#ccc;">Registered Customers</span>
+                        <span style="padding:0 5px;"><i class="fa fa-user-circle fa-2x"></i></span>
+                        <span style="padding:0 5px;"><i class="fa fa-heart fa-2x"></i></span>
+                        <span style="padding:0 5px;"><i class="fa fa-shopping-bag fa-2x"></i></span>
+                    </p>
+                    <p class="text-center" style="color:#ccc;">If you have an account, sign i with your email address.</p>
+                    <form>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="username">
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="password">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Login" class="btn float-right login_btn">
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center links">
+                        Don't have an account?<a href="#">Sign Up</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="#">Forgot your password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="text-center" style="color:#D0AD55">Our Achievements</h1>
+        <div class="row text-center">
+
+            <div class="col">
+                <div class="counter">
+                    <i class="fa fa-code fa-2x"></i>
+                    <h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2>
+                    <p class="count-text ">Our Customer</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="counter">
+                    <i class="fa fa-coffee fa-2x"></i>
+                    <h2 class="timer count-title count-number" data-to="1700" data-speed="1500"></h2>
+                    <p class="count-text ">Happy Clients</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="counter">
+                    <i class="fa fa-paperclip fa-2x"></i>
+                    <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+                    <p class="count-text ">Project Complete</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="counter">
+                    <i class="fa fa-bug fa-2x"></i>
+                    <h2 class="timer count-title count-number" data-to="157" data-speed="1500"></h2>
+                    <p class="count-text ">Coffee With Clients</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<script defer src="~/Contents/js/counter.js"></script>

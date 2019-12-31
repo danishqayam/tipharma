@@ -177,6 +177,7 @@
     <Content Include="Contents\img\testimonial-3.jpg" />
     <Content Include="Contents\img\testimonial-4.jpg" />
     <Content Include="Contents\img\testimonial-5.jpg" />
+    <Content Include="Contents\js\counter.js" />
     <Content Include="Contents\js\main.js" />
     <Content Include="Contents\lib\animate\animate.css" />
     <Content Include="Contents\lib\animate\animate.min.css" />
